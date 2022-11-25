@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import { AuthContext } from '../../contexts/auth';
 import { useNavigate } from 'react-router-dom';
 
-//import "./styles.css";
 import "./Login.css";
 
 const LoginPage = () => {
@@ -17,7 +16,7 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("submit", { email, password });
-    login(email, password);//integração com o contexto e com a API
+    login(email, password);
   };
 
   const handleClick = (event) => {

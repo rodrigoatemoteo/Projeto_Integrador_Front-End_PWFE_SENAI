@@ -12,7 +12,3 @@ export const createSession = async(email, password) => {
 export const logar = async(email, password) => {
   return api.get("/usuarios/" + email, { email, password } );
 };
-
-export const getUsers = async () => {
-  return api.get("/users");
-};

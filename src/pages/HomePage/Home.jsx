@@ -2,8 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 
 import { AuthContext } from '../../contexts/auth';
 
-//import { getUsers } from "../../services/api";
-
 import Header from '../../components/Header';
 
 import Cards from '../../components/Cards/Cards';
@@ -17,10 +15,7 @@ const HomePage = () => {
   useEffect(() => {
     (async () => {
       const response = [{ '_id': 1, 'email': 'admin@admin.com', 'password': '123' }, { '_id': 2, 'email': 'user@user.com', 'password': '321' }];
-      //const response = await getUsers();
       setUsers(response);
-      //setUsers(response.data);
-      //setUsers(response.data);
       setLoading(false);
     })();
   }, []);
@@ -29,7 +24,7 @@ const HomePage = () => {
     logout();
   };
 
-  if (loading) {
+  if(loading){
     return <div className='loading'><h1>Carregando dados...</h1></div>
   }
 
